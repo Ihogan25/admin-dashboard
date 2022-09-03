@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    width: 100%;
+    height: 120vh;
+}
+
+.sidebar {
+    grid-area: 1/1/7/1;
+    background-color: rgb(138, 181, 214);
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    color: white;
+}
+
+.topbar {
+    grid-area: 1/2/1/7;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,1fr);
+    box-shadow: 0 0 5px 0 black;
+}
+
+.topbar input {
+    grid-area: 1/2/1/4;
+    border-radius: 5px;
+    height: 1rem;
+    margin: auto 0;
+    border: 1px solid black;
+    background-color: rgb(236, 236, 236);
+}
+.three-buttons {
+    display: flex;
+    gap: 1rem;
+}
+.three-buttons button {
+    border: none;
+    border-radius: 15px;
+    background-color: lightskyblue;
+    color: white;
+    height: 2rem;
+    width: 5rem;
+    
+}
+
+.topbar * {
+    margin: auto;
+}
+
+.content {
+    display: grid;
+    grid-area: 2/2/7/5;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+h2 {
+    margin: auto;
+    height: 5rem;
+    width: 5rem;
+    background-color: red;
+}
+
+.side-content {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-area: 2/5/7/6;
+}
+
+.card {
+    margin: auto 1rem;
+    border-left: 5px solid orange;
+    box-shadow: 0 0 5px 0 black;
+    border-radius: 5px;
+}
+
